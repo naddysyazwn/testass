@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Meal Categories</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    
+    <header>
+      <button id="sidebarToggle">☰</button>
+      <h1>MEAL PLANNER! 🥘🍴</h1>
+      <p>Welcome to the Meal Planner application. Choose what you're craving for!</p>
+    </header>
+
+    <div id="sidebar" class="closed">
+      <br><br>
+      <br><br>
+      <br><br>
+      <br><br>
+      <div id="closebutton">✕</div>
+      
+      <a href="index.html">Home</a><br><br>
+      <a href="CRUD.html">Planner</a><br><br>
+    </div>
+
+    <br><br>
+    <br><br>
+    <br><br>
+
+    <div>
+      <label for="searchData"></label>
+      <select id="searchData">
+        <option value="" disabled selected>Choose Category</option>
+      </select>
+      <br><br>
+      <button id="searchButton">Search</button>
+    </div>
+
+    <div id="categories-list">
+      <p><b>Select a category to display meals.</b></p>
+      <p><b>All meals:</b></p>
+    <div class="meals-container" id="allMealsContainer"></div>
+    </div>
+
+    <script src="fetchapi.js"></script>
+  </body>
+</html>

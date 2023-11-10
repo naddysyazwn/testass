@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="home.css" />
+        
+</head>
+<body>
+    <!--add menu sidebar at the top left website-->
+    <div class="banner">
+        <!--add date and time at the top of website-->
+        <div id="datetime">
+        </div>
+
+        <!--add picture content of website-->
+        <div class="content">
+            <h1> Let Your Taste Buds Guide You </h1>
+            <p style="color: whitesmoke;"> Relax please, we've got you covered every day of the week </p>
+            <!--add button to go to notes page-->
+            <div>
+                <a href="index.html">
+                    <button type="button"><span id="learn"></span>EXPLORE MORE</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get the current date and time
+        function getCurrentDateTime() {
+            var currentDate = new Date();
+            var date = currentDate.toDateString();
+            var time = currentDate.toLocaleTimeString();
+
+            return date + ' ' + time;
+        }
+
+        // Update the date and time every second
+        function updateDateTime() {
+            var datetimeElement = document.getElementById('datetime');
+
+            // Update the content
+            datetimeElement.innerHTML = getCurrentDateTime();
+
+            // Schedule the next update
+            setTimeout(updateDateTime, 1000);
+        }
+
+        // Start updating the date and time
+        updateDateTime();
+    </script>
+</body>
+</html>

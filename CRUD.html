@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>CRUD App</title>
+        <link rel="stylesheet" href="CRUD.css" />
+        <link rel="stylesheet" href="photon.min.css" />
+    </head>
+    <body>
+        <header>
+            <button id="sidebarToggle">☰</button>
+            <h1>MEAL PLANNER! 🥘🍴</h1>
+            <p>Welcome to the Meal Planner application. Choose what you're craving for!</p>
+          </header>
+      
+          <div id="sidebar" class="closed">
+            <br><br>
+            <br><br>
+            <br><br>
+            <br><br>
+            <div id="closebutton">✕</div>
+            
+            <a href="index.html">Home</a><br><br>
+            <a href="CRUD.html">Planner</a><br><br>
+          </div>
+      
+          <br><br>
+          <br><br>
+          <br><br>
+
+        <div class="mainWrapper">
+            <div class="transparent-container">
+                <h1>WEEKLY PLANNER</h1>
+                <form>
+                    <div class="form-group">
+                        <label>File name</label>
+                        <input id="fileName" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Content</label>
+                        <textarea id="fileContents" class="form-control" rows="5"></textarea>
+                    </div>
+                </form>
+                
+                <button id="btnCreate" class="btn btn-default">Create</button>
+                <button id="btnRead" class="btn btn-default">Read</button>
+                <button id="btnUpdate" class="btn btn-default">Update</button>
+            </div>
+
+            <table id="fileTable">
+                <thead>
+                    <tr>
+                        <th>Meal Plan</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="fileTableBody"></tbody> <!-- Table for displaying meal plans -->
+            </table>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const sidebar = document.getElementById("sidebar");
+                const sidebarToggle = document.getElementById("sidebarToggle");
+                const closebutton = document.getElementById("closebutton");
+                sidebarToggle.addEventListener("click", function () {
+                    sidebar.classList.toggle("open");
+                });
+                
+                closebutton.addEventListener("click", function () {
+                    sidebar.classList.toggle("open");
+                });
+            });
+        </script>
+        
+        <script src="CRUD.js"></script>
+    </body>
+</html>
